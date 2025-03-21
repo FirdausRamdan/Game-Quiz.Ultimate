@@ -7,51 +7,23 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            -webkit-user-select: none; /* Disable text selection */
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
 </head>
-<body>
+<body oncontextmenu="return false" onkeydown="return false">
     <button id="menu-button">Menu</button>
     <div id="menu-panel">
         <h2>Menu</h2>
         <button onclick="goHome()">Kembali ke Rumah</button>
-        <button onclick="showAbout()">About</button>
         <button onclick="toggleShop()">Shop</button>
         <button onclick="showResetConfirmation()">Reset Game</button>
         <button onclick="resumeGame()">Lanjutkan</button>
-        <div id="shop-panel">
-            <h3>Shop</h3>
-            <p id="points">Points: 0</p>
-            <div>
-                <img src="heart.png" alt="Extra Heart">
-                <button class="btn btn-info" onclick="buyItem('extra-heart')">Beli Hati Tambahan (50 Poin)</button>
-            </div>
-            <div>
-                <img src="slow-time.png" alt="Slow Time">
-                <button class="btn btn-info" onclick="buyItem('slow-time')">Perlambat Waktu (30 Poin)</button>
-            </div>
-            <div>
-                <img src="skip.png" alt="Skip Question">
-                <button class="btn btn-info" onclick="buyItem('skip-question')">Lewati Pertanyaan (20 Poin)</button>
-            </div>
-            <div>
-                <img src="boost.png" alt="Boost">
-                <button class="btn btn-info" onclick="buyItem('boost')">Boost Poin (40 Poin)</button>
-            </div>
-            <div>
-                <img src="remove-option.png" alt="Remove Option">
-                <button class="btn btn-info" onclick="buyItem('remove-option')">Hapus Opsi (40 Poin)</button>
-            </div>
-            <button class="btn btn-secondary" onclick="toggleShop()">Tutup Shop</button>
-        </div>
-    </div>
-    <div id="about-panel">
-        <h2>About</h2>
-        <p>Ini adalah quiz yang dibuat oleh...</p>
-        <button onclick="hideAbout()">Kembali</button>
-    </div>
-    <div id="reset-confirmation">
-        <p>Apakah Anda yakin ingin mereset game?</p>
-        <button onclick="resetGame()">Ya</button>
-        <button onclick="hideResetConfirmation()">Tidak</button>
     </div>
     <div class="background-container">
         <div class="container">
@@ -66,28 +38,33 @@
                 <p id="correct-answers">Jawaban Benar: 0</p>
                 <p id="incorrect-answers">Jawaban Salah: 0</p>
             </div>
-            <button id="next-button" class="btn btn-secondary">Soal Berikutnya</button>
+            <button id="next-button" class="btn btn-secondary" style="display: none;">Soal Berikutnya</button>
             <div id="game-over">Maaf, kamu kalah!</div>
             <img id="shop-logo" src="shop.png" alt="Shop">
             <div id="boost"></div>
         </div>
     </div>
-    <div id="results-panel">
-        <h2>Hasil Quiz</h2>
-        <p id="total-questions">Total Soal Terjawab: 0</p>
-        <p id="correct-answers">Jawaban Benar: 0</p>
-        <p id="incorrect-answers">Jawaban Salah: 0</p>
-        <p id="score-percentage">Nilai: 0%</p>
-        <p id="points-earned">Poin: 0</p>
-        <p id="result-message"></p>
-        <p id="total-time">Total Waktu: 0s</p>
-        <p id="average-time">Rata-rata Waktu per Pertanyaan: 0s</p>
-        <button onclick="goHome()">Kembali ke Rumah</button>
-        <button onclick="resetGame()">Reset Game</button>
-        <div id="leaderboard">
-            <h3>Leaderboard</h3>
-            <ul id="leaderboard-list"></ul>
+    <div id="shop-panel">
+        <h3>Shop</h3>
+        <p id="points">Points: 0</p>
+        <div>
+            <img src="heart.png" alt="Extra Heart">
+            <button class="btn btn-info" onclick="buyItem('extra-heart')">Beli Hati Tambahan (50 Poin)</button>
         </div>
+        <div>
+            <img src="slow-time.png" alt="Slow Time">
+            <button class="btn btn-info" onclick="buyItem('slow-time')">Perlambat Waktu (30 Poin)</button>
+        </div>
+        <div>
+            <img src="skip.png" alt="Skip Question">
+            <button class="btn btn-info" onclick="buyItem('skip-question')">Lewati Pertanyaan (20 Poin)</button>
+        </div>
+        <button class="btn btn-secondary" onclick="toggleShop()">Tutup Shop</button>
+    </div>
+    <div id="leaderboard-panel" style="display: none;">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list"></ul>
+        <button onclick="hideLeaderboard()">Kembali</button>
     </div>
     <script src="script.js"></script>
 </body>

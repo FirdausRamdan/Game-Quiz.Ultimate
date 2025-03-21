@@ -1,24 +1,223 @@
 const questions = [
-    { question: "Apa ibu kota Indonesia?", options: ["Jakarta", "Surabaya", "Bandung", "Medan"], correct: 0 },
-    { question: "Siapa penemu lampu pijar?", options: ["Nikola Tesla", "Thomas Edison", "Albert Einstein", "Alexander Graham Bell"], correct: 1 },
-    { question: "Planet terbesar di tata surya adalah?", options: ["Bumi", "Mars", "Jupiter", "Venus"], correct: 2 },
-    { question: "Siapa presiden pertama Indonesia?", options: ["Sukarno", "Suharto", "Habibie", "Megawati"], correct: 0 },
-    { question: "Kapan Indonesia merdeka?", options: ["1945", "1950", "1965", "1970"], correct: 0 },
-    { question: "Apa nama candi terbesar di Indonesia?", options: ["Borobudur", "Prambanan", "Mendut", "Sewu"], correct: 0 },
-    { question: "Siapa pahlawan nasional dari Aceh?", options: ["Cut Nyak Dien", "RA Kartini", "Dewi Sartika", "Martha Christina Tiahahu"], correct: 0 },
-    { question: "Apa nama kerajaan Hindu pertama di Indonesia?", options: ["Kutai", "Majapahit", "Sriwijaya", "Mataram"], correct: 0 },
-    { question: "Siapa penulis buku 'Laskar Pelangi'?", options: ["Andrea Hirata", "Pramoedya Ananta Toer", "Tere Liye", "Dewi Lestari"], correct: 0 },
-    { question: "Apa nama tarian tradisional dari Bali?", options: ["Kecak", "Saman", "Jaipong", "Piring"], correct: 0 },
-    { question: "Siapa penemu teori gravitasi?", options: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"], correct: 0 },
-    { question: "Apa nama ibukota provinsi Jawa Barat?", options: ["Bandung", "Jakarta", "Surabaya", "Semarang"], correct: 0 },
-    { question: "Siapa penulis novel 'Bumi Manusia'?", options: ["Pramoedya Ananta Toer", "Andrea Hirata", "Tere Liye", "Dewi Lestari"], correct: 0 },
-    { question: "Apa nama gunung tertinggi di Indonesia?", options: ["Puncak Jaya", "Semeru", "Rinjani", "Kerinci"], correct: 0 },
-    { question: "Siapa presiden Indonesia saat ini?", options: ["Joko Widodo", "Sukarno", "Suharto", "Habibie"], correct: 0 },
-    { question: "Apa nama ibukota provinsi Sumatera Utara?", options: ["Medan", "Padang", "Pekanbaru", "Palembang"], correct: 0 },
-    { question: "Siapa pahlawan nasional dari Jawa Tengah?", options: ["Diponegoro", "Sudirman", "Kartini", "Sutomo"], correct: 0 },
-    { question: "Apa nama candi Hindu terbesar di Indonesia?", options: ["Prambanan", "Borobudur", "Mendut", "Sewu"], correct: 0 },
-    { question: "Siapa penulis buku 'Negeri 5 Menara'?", options: ["Ahmad Fuadi", "Andrea Hirata", "Pramoedya Ananta Toer", "Tere Liye"], correct: 0 },
-    { question: "Apa nama tarian tradisional dari Aceh?", options: ["Saman", "Kecak", "Jaipong", "Piring"], correct: 0 }
+    {
+      question: "1. Studi tentang kebudayaan adalah suatu studi yang mempelajari...",
+      options: [
+        "Gagasan-gagasan untuk mewujudkan tindakan dan artefak",
+        "Kesenian",
+        "Karya sastra dan cerita rakyat",
+        "Cara-cara bercocok tanam"
+      ],
+      correct: 0
+    },
+    {
+      question: "2. Pembangunan merupakan indikator perubahan sosial dan kebudayaan, karena pembangunan...",
+      options: [
+        "Ikut memperkenalkan hal-hal yang baru",
+        "Mengubah dan merombak tradisi",
+        "Meningkatkan taraf kehidupan",
+        "Memperluas kesempatan kerja"
+      ],
+      correct: 2
+    },
+    {
+      question: "3. Peninggalan masa lampau berupa sisa-sisa kehidupan, seperti tulang manusia, tulang hewan, dan tumbuhan yang telah membatu karena proses kimiawi disebut dengan...",
+      options: [
+        "Artefak",
+        "Fosil",
+        "Flakes",
+        "Pebble"
+      ],
+      correct: 1
+    },
+    {
+      question: "4. Ilmu pengetahuan yang mempelajari kehidupan masa lampau manusia sebelum ada sumber-sumber tertulis adalah...",
+      options: [
+        "Etnografi",
+        "Anthropologi",
+        "Arkeologi",
+        "Historiografi"
+      ],
+      correct: 2
+    },
+    {
+      question: "5. Kegiatan ekonomi pada masa Paleolitikum ditandai dengan...",
+      options: [
+        "Bertani",
+        "Berladang",
+        "Berburu",
+        "Beternak"
+      ],
+      correct: 2
+    },
+    {
+      question: "6. Berikut ini adalah ciri-ciri kehidupan manusia pada masa Paleolitikum, kecuali...",
+      options: [
+        "Peralatan hidup terbuat dari batu dan tulang",
+        "Sudah mengenal pola kehidupan kesukuan",
+        "Kehidupan ekonominya berburu dan mengumpulkan makanan",
+        "Hidup secara berkelompok"
+      ],
+      correct: 1
+    },
+    {
+      question: "7. Alat yang diduga digunakan untuk bercocok tanam pada zaman prasejarah adalah...",
+      options: [
+        "Bajak",
+        "Kapak corong",
+        "Chopper",
+        "Beliung persegi"
+      ],
+      correct: 1
+    },
+    {
+      question: "8. Zaman prasejarah ditandai oleh pola kehidupan gotong royong, terutama pada zaman...",
+      options: [
+        "Paleolitikum",
+        "Neolitikum",
+        "Logam",
+        "Megalitikum"
+      ],
+      correct: 1
+    },
+    {
+      question: "9. Keranda batu yang bentuknya seperti lesung dan mempunyai tutup dari batu serta di dalamnya sering ditemukan mayat beserta bekal kubur seperti periuk, kapak persegi, dan perhiasan adalah...",
+      options: [
+        "Dolmen",
+        "Sarkofagus",
+        "Waruga",
+        "Punden"
+      ],
+      correct: 2
+    },
+    {
+      question: "10. Kapak corong digunakan sebagai perkakas manusia prasejarah pada zaman...",
+      options: [
+        "Tembaga",
+        "Perunggu",
+        "Besi",
+        "Neolitik"
+      ],
+      correct: 3
+    },
+    {
+      question: "11. Pada zaman prasejarah, kawasan Asia Tenggara merupakan daerah kesatuan kebudayaan batu muda dan perunggu. Daerah pusat kebudayaan perunggu terletak di...",
+      options: [
+        "Bachson",
+        "Dongson",
+        "Hoabinh",
+        "Bajak"
+      ],
+      correct: 1
+    },
+    {
+      question: "12. Profesi yang paling berpengaruh dalam kehidupan masyarakat prasejarah Indonesia adalah...",
+      options: [
+        "Tentara",
+        "Kepala desa dan dukun",
+        "Raja",
+        "Pedagang"
+      ],
+      correct: 1
+    },
+    {
+      question: "13. Masyarakat Indonesia pada masa perundagian telah mengenal aturan pembagian kerja karena...",
+      options: [
+        "Mereka telah hidup menetap",
+        "Merupakan masyarakat dengan kehidupan food producing",
+        "Teknologi perundagian memerlukan tenaga yang memiliki keahlian khusus",
+        "Hidup dalam kelompok suku-suku"
+      ],
+      correct: 2
+    },
+    {
+      question: "14. Kebudayaan Neolitikum merupakan dasar kebudayaan Indonesia sekarang, sebab...",
+      options: [
+        "Dikembangkannya pola hidup nomaden",
+        "Telah dikenalnya pola pemerintahan berdasarkan kesukuan",
+        "Manusia telah mengenal kepercayaan",
+        "Kehidupan penduduk telah berubah dari food gathering menjadi food producing"
+      ],
+      correct: 3
+    },
+    {
+      question: "15. Hasil kebudayaan megalitikum banyak ditemukan di wilayah Nusantara. Salah satu peninggalan kebudayaan Megalitikum adalah waruga, yang sering juga disebut dengan nama...",
+      options: [
+        "Artefak",
+        "Kjokkenmodinger",
+        "Abris sous rouche",
+        "Kubur batu"
+      ],
+      correct: 3
+    },
+    {
+      question: "16. Berdasarkan peninggalan kebudayaan dan bahasa, bangsa-bangsa di Asia Tenggara berasal dari rumpun yang sama, yaitu...",
+      options: [
+        "Melayu Polynesia",
+        "Austromelayu",
+        "Melanesia",
+        "Melayu-Austronesia"
+      ],
+      correct: 3
+    },
+    {
+      question: "17. Ciri-ciri kehidupan Meganthropus Paleojavanicus, di antaranya adalah...",
+      options: [
+        "1, 2, dan 3",
+        "1, 3, dan 5",
+        "2, 3, dan 4",
+        "2, 3, dan 5"
+      ],
+      correct: 1
+    },
+    {
+      question: "18. Sejarah tidak berkembang ke arah depan dengan tujuan yang pasti, melainkan bergerak seperti garis lingkaran yang tinggi-rendahnya diakibatkan oleh keadaan manusia. Pernyataan tersebut adalah pengertian sejarah menurut...",
+      options: [
+        "Ibnu Khaldun",
+        "Herodotus",
+        "Moh. Yamin",
+        "W. J. S. Poenvandinnata"
+      ],
+      correct: 0
+    },
+    {
+      question: "19. Seorang guru menceritakan Perang Dunia II kepada siswa di ruang kelas. Hal tersebut dapat digolongkan ke dalam konsep sejarah, yaitu sejarah sebagai...",
+      options: [
+        "Ilmu",
+        "Peristiwa",
+        "Kisah",
+        "Seni"
+      ],
+      correct: 1
+    },
+    {
+      question: "20. Rangkaian peristiwa masa lalu yang disusun berdasarkan urutan waktu disebut sebagai konsep...",
+      options: [
+        "Historiografi",
+        "Verifikasi",
+        "Periodesasi",
+        "Kronologis"
+      ],
+      correct: 3
+    }
+  ];
+  
+
+const randomQuestions = [
+    {
+        question: "Random 1: Apa ibu kota negara terpadat di dunia?",
+        options: ["Tokyo", "Delhi", "Shanghai", "São Paulo"],
+        correct: 0
+    },
+    {
+        question: "Random 2: Siapa penemu teori relativitas?",
+        options: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"],
+        correct: 1
+    },
+    {
+        question: "Random 3: Planet terdekat dengan matahari adalah?",
+        options: ["Venus", "Mars", "Merkurius", "Bumi"],
+        correct: 2
+    }
 ];
 
 let currentQuestionIndex = 0;
@@ -36,6 +235,19 @@ let totalTimeSpent = 0;
 let timeSpentOnCurrentQuestion = 0;
 let timeSpentPerQuestion = [];
 let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+let difficulty = 'medium'; // Default difficulty
+let randomQuestionIndices = [];
+let isRandomQuestion = false;
+
+// Initialize random question indices
+function initializeRandomQuestions() {
+    while (randomQuestionIndices.length < 3) {
+        let randomIndex = Math.floor(Math.random() * (questions.length - 5)) + 5;
+        if (!randomQuestionIndices.includes(randomIndex)) {
+            randomQuestionIndices.push(randomIndex);
+        }
+    }
+}
 
 // Display the current question and options
 function displayQuestion() {
@@ -44,17 +256,34 @@ function displayQuestion() {
     const feedbackElement = document.getElementById('feedback');
     const timerElement = document.getElementById('timer');
 
-    const currentQuestion = questions[currentQuestionIndex];
-    questionElement.textContent = currentQuestion.question;
-    optionsElement.innerHTML = '';
+    if (randomQuestionIndices.includes(currentQuestionIndex)) {
+        alert("Berhati-hatilah..");
+        isRandomQuestion = true;
+        const randomQuestion = randomQuestions[randomQuestionIndices.indexOf(currentQuestionIndex)];
+        questionElement.textContent = randomQuestion.question;
+        optionsElement.innerHTML = '';
 
-    currentQuestion.options.forEach((option, index) => {
-        const button = document.createElement('button');
-        button.textContent = option;
-        button.className = 'btn btn-primary m-2';
-        button.onclick = () => checkAnswer(index);
-        optionsElement.appendChild(button);
-    });
+        randomQuestion.options.forEach((option, index) => {
+            const button = document.createElement('button');
+            button.textContent = option;
+            button.className = 'btn btn-primary m-2';
+            button.onclick = () => checkAnswer(index, true);
+            optionsElement.appendChild(button);
+        });
+    } else {
+        isRandomQuestion = false;
+        const currentQuestion = questions[currentQuestionIndex];
+        questionElement.textContent = currentQuestion.question;
+        optionsElement.innerHTML = '';
+
+        currentQuestion.options.forEach((option, index) => {
+            const button = document.createElement('button');
+            button.textContent = option;
+            button.className = 'btn btn-primary m-2';
+            button.onclick = () => checkAnswer(index, false);
+            optionsElement.appendChild(button);
+        });
+    }
 
     feedbackElement.textContent = '';
     timerElement.style.display = 'block'; // Show timer
@@ -62,13 +291,19 @@ function displayQuestion() {
 }
 
 // Check the selected answer and update the game state
-function checkAnswer(selectedIndex) {
+function checkAnswer(selectedIndex, isRandom) {
     const feedbackElement = document.getElementById('feedback');
-    const currentQuestion = questions[currentQuestionIndex];
     const optionsElement = document.getElementById('options');
     const buttons = optionsElement.getElementsByTagName('button');
 
-    if (selectedIndex === currentQuestion.correct) {
+    let correctIndex;
+    if (isRandom) {
+        correctIndex = randomQuestions[randomQuestionIndices.indexOf(currentQuestionIndex)].correct;
+    } else {
+        correctIndex = questions[currentQuestionIndex].correct;
+    }
+
+    if (selectedIndex === correctIndex) {
         feedbackElement.textContent = 'Jawaban Benar!';
         feedbackElement.style.color = 'green';
         points += 5 * boostMultiplier;
@@ -80,7 +315,7 @@ function checkAnswer(selectedIndex) {
         hearts--;
         incorrectAnswers++;
         buttons[selectedIndex].classList.add('incorrect-answer');
-        buttons[currentQuestion.correct].classList.add('correct-answer');
+        buttons[correctIndex].classList.add('correct-answer');
         updateHearts();
         if (hearts === 0) {
             gameOver();
@@ -101,6 +336,8 @@ function checkAnswer(selectedIndex) {
     if (currentQuestionIndex === 19) {
         showResults();
     }
+
+    document.getElementById('next-button').style.display = 'block';
 }
 
 // Move to the next question
@@ -109,19 +346,18 @@ function nextQuestion() {
     displayQuestion();
     updateDifficulty();
     resetTimer();
+    document.getElementById('next-button').style.display = 'none';
 }
 
 // Update the difficulty level based on the current question index
 function updateDifficulty() {
     const bodyElement = document.body;
-    if (currentQuestionIndex < 5) {
+    if (difficulty === 'easy') {
         bodyElement.className = 'level-1';
-    } else if (currentQuestionIndex < 10) {
+    } else if (difficulty === 'medium') {
         bodyElement.className = 'level-2';
-    } else if (currentQuestionIndex < 15) {
+    } else if (difficulty === 'hard') {
         bodyElement.className = 'level-3';
-    } else {
-        bodyElement.className = 'level-4';
     }
 }
 
@@ -137,7 +373,7 @@ function updateHearts() {
 // Reset the timer for the current question
 function resetTimer() {
     clearInterval(timer);
-    timeLeft = 30;
+    timeLeft = difficulty === 'easy' ? 40 : difficulty === 'medium' ? 30 : 20;
     timeSpentOnCurrentQuestion = 0;
     const timerElement = document.getElementById('timer');
     timerElement.textContent = `Time left: ${timeLeft}s`;
@@ -180,6 +416,10 @@ function gameOver() {
 
 // Buy an item from the shop
 function buyItem(item) {
+    if (isRandomQuestion) {
+        alert('Tidak bisa menggunakan shop selama soal random!');
+        return;
+    }
     const cost = getItemCost(item);
     if (points >= cost) {
         points -= cost;
@@ -214,6 +454,10 @@ function getItemCost(item) {
 
 // Activate the boost effect
 function activateBoost() {
+    if (isRandomQuestion) {
+        alert('Tidak bisa menggunakan boost selama soal random!');
+        return;
+    }
     boostActive = true;
     boostMultiplier = 1.5;
     document.getElementById('boost').style.display = 'inline';
@@ -259,6 +503,10 @@ function updateResults() {
 
 // Toggle the shop panel
 function toggleShop() {
+    if (isRandomQuestion) {
+        alert('Tidak bisa membuka shop selama soal random!');
+        return;
+    }
     const shopPanel = document.getElementById('shop-panel');
     shopPanel.classList.toggle('open');
     if (shopPanel.classList.contains('open')) {
@@ -372,6 +620,44 @@ function showResults() {
     });
 
     document.getElementById('results-panel').style.display = 'block';
+    showLeaderboard();
+}
+
+// Change the difficulty level
+function changeDifficulty() {
+    const difficultySelect = document.getElementById('difficulty');
+    difficulty = difficultySelect.value;
+    updateDifficulty();
+}
+
+// Show the settings panel
+function showSettings() {
+    document.getElementById('settings-panel').style.display = 'block';
+    pauseGame();
+}
+
+// Hide the settings panel
+function hideSettings() {
+    document.getElementById('settings-panel').style.display = 'none';
+    resumeGame();
+}
+
+// Show the leaderboard panel
+function showLeaderboard() {
+    const leaderboardList = document.getElementById('leaderboard-list');
+    leaderboardList.innerHTML = '';
+    leaderboard.forEach((entry, index) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${index + 1}. Poin: ${entry.score}, Benar: ${entry.correctAnswers}, Salah: ${entry.incorrectAnswers}, Nilai: ${entry.scorePercentage.toFixed(2)}%, Total Waktu: ${entry.totalTimeSpent}s, Rata-rata Waktu: ${entry.averageTimePerQuestion.toFixed(2)}s`;
+        leaderboardList.appendChild(listItem);
+    });
+    document.getElementById('leaderboard-panel').style.display = 'block';
+}
+
+// Hide the leaderboard panel
+function hideLeaderboard() {
+    document.getElementById('leaderboard-panel').style.display = 'none';
+    resumeGame();
 }
 
 document.getElementById('menu-button').onclick = () => {
@@ -383,6 +669,7 @@ document.getElementById('next-button').onclick = nextQuestion;
 document.getElementById('shop-logo').onclick = toggleShop;
 
 window.onload = () => {
+    initializeRandomQuestions();
     displayQuestion();
     updateDifficulty();
     updateHearts();
