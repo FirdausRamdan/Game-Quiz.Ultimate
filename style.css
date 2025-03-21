@@ -300,3 +300,35 @@ h1 {
     background-color: #fff;
     color: #000;
 }
+
+#countdown {
+    display: none;
+    font-size: 5rem;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: countdown-animation 1s steps(1, end) infinite;
+}
+
+@keyframes countdown-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+button {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00f;
+}
+
+button:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 5px #00f;
+}

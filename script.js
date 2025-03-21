@@ -414,6 +414,7 @@ function gameOver() {
     showResults();
     document.getElementById('restart-button').style.display = 'block';
     document.getElementById('home-button').style.display = 'block';
+    document.getElementById('reset-button').style.display = 'block';
 }
 
 // Buy an item from the shop
@@ -577,6 +578,7 @@ function resetGame() {
     document.getElementById('results').style.display = 'none';
     document.getElementById('restart-button').style.display = 'none';
     document.getElementById('home-button').style.display = 'none';
+    document.getElementById('reset-button').style.display = 'none';
     hideResetConfirmation();
     resumeGame();
     displayQuestion();
@@ -673,8 +675,29 @@ document.getElementById('next-button').onclick = nextQuestion;
 document.getElementById('shop-logo').onclick = toggleShop;
 document.getElementById('restart-button').onclick = resetGame;
 document.getElementById('home-button').onclick = goHome;
+document.getElementById('reset-button').onclick = resetGame;
 
-window.onload = () => {
+// Add countdown animation before the game starts
+function startCountdown() {
+    const countdownElement = document.getElementById('countdown');
+    let countdown = 3;
+    countdownElement.style.display = 'block';
+    countdownElement.textContent = countdown;
+
+    const countdownInterval = setInterval(() => {
+        countdown--;
+        if (countdown > 0) {
+            countdownElement.textContent = countdown;
+        } else {
+            clearInterval(countdownInterval);
+            countdownElement.style.display = 'none';
+            startGame();
+        }
+    }, 1000);
+}
+
+// Start the game after the countdown
+function startGame() {
     initializeRandomQuestions();
     displayQuestion();
     updateDifficulty();
@@ -682,4 +705,8 @@ window.onload = () => {
     resetTimer();
     updatePoints();
     updateScore();
+}
+
+window.onload = () => {
+    startCountdown();
 };
