@@ -412,6 +412,8 @@ function gameOver() {
     document.getElementById('results').style.display = 'block';
     document.getElementById('timer').style.display = 'none'; // Hide timer
     showResults();
+    document.getElementById('restart-button').style.display = 'block';
+    document.getElementById('home-button').style.display = 'block';
 }
 
 // Buy an item from the shop
@@ -573,6 +575,8 @@ function resetGame() {
     document.getElementById('feedback').style.display = 'block';
     document.getElementById('next-button').style.display = 'block';
     document.getElementById('results').style.display = 'none';
+    document.getElementById('restart-button').style.display = 'none';
+    document.getElementById('home-button').style.display = 'none';
     hideResetConfirmation();
     resumeGame();
     displayQuestion();
@@ -667,6 +671,8 @@ document.getElementById('menu-button').onclick = () => {
 
 document.getElementById('next-button').onclick = nextQuestion;
 document.getElementById('shop-logo').onclick = toggleShop;
+document.getElementById('restart-button').onclick = resetGame;
+document.getElementById('home-button').onclick = goHome;
 
 window.onload = () => {
     initializeRandomQuestions();
